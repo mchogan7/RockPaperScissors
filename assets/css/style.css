@@ -1,193 +1,35 @@
-html {
-    background-color: #363F45;
+#middle, .header, .playerBox, .chatContainer, .chatBox {
+    text-align: center;
 }
 
-.ratingBar {
-    font-family: 'Montserrat', sans-serif;
-    height: 40px;
-    background-color: rgba(255, 255, 255, .35);
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    text-transform: uppercase;
-    line-height: 40px;
-    padding-left: 15px;
+.pick2, .pick1 {
+    height: 50px;
+    line-height: 50px;
+}
+
+.chatBox{
+    height: 200px;
+    border: solid;
+    border-width: 1px;
+    margin-top: 15px;
     text-align: left;
-    box-sizing: border-box;
-    break-inside: avoid;
+    bottom: 0px;
+    overflow-y: auto;
+    vertical-align: text-bottom;
 }
 
-.gifContainer {
-    position: relative;
-    padding-top: 15px;
-    box-sizing: border-box;
-    break-inside: avoid;
+.nameBox {
+    height: 30px;
 }
 
-.gif {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    break-inside: avoid;
+.disabled {
+    opacity: .5;
+    pointer-events: none;
 }
 
-.button {
-    font-family: 'Montserrat', sans-serif;
-    display: inline-block;
-    text-align: center;
-    background-color: #FEB41C;
-    color: #363F45;
-    margin: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-transform: uppercase;
-    cursor: pointer;
-    opacity: .7;
-    transition: opacity 0.3s ease;
-}
-
-.button:hover {
-    opacity: 1;
-}
-
-.errorMessage {
-    margin-top: 15%;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
-    color: #FEB41C;
-}
-
-.active {
-    opacity: 1;
-}
-
-.search {
-    font-family: 'Montserrat', sans-serif;
-    display: inline-block;
-    width: 400px;
-    height: 40px;
-    box-sizing: border-box;
-    border-style: none;
-    padding-left: 10px;
-    text-transform: uppercase;
-}
-
-.searchBar {
-    font-family: 'Montserrat', sans-serif;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.searchIcon {
-    padding-left: 10px;
-    background-color: white;
-    line-height: 39px;
-    padding-bottom: 1px;
-}
-
-.searchContainer{
-    background-color: white;
-    width: 400px;
-    display: inline-block;
-}
-
-.submit {
-    padding-left: 15px;
-    padding-right: 15px;
-    display: inline-block;
-    background-color: #FEB41C;
-    color: #363F45;
-    height: 40px;
-    line-height: 40px;
-    font-weight: 700;
-    font-size: 13px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.submit:hover {
-    color: #5E7C88;
-}
-
-input:focus {
-    outline: none;
-}
-
-.buttonArea {
-    text-align: center;
-    max-width: 1200px;
-    margin: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.gifArea {
-    padding-left: 15px;
-    padding-right: 15px;
-    columns: 2;
-    padding-bottom: 15px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.glowRed {
-    color: #363F45;
-    animation-name: strobe;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes strobe {
-    0% {
-        color: #363F45;
-    }
-    50% {
-        color: red;
-    }
-    100% {
-        color: #363F45;
-    }
-}
-
-@media only all and (max-width: 640px) {
-    .gifArea {
-        padding-left: 15px;
-        padding-right: 15px;
-        columns: 1;
-    }
-
-    .searchBar {
-   padding-left: 15px;
-   padding-right: 15px;
-   margin-top: 15px;
-   margin-bottom: 20px;
-}
-
-.searchIcon {
-    width: 10%;
-    padding-left: 0px;
-}
-	.search {
-        width: 90%;
-		padding: 0px;
-		text-align: center;
-	}
-
-	.submit {
-		margin-top: 2px;
-		display: inline-block;
-		width: 100%;
-		padding: 0px;
-	}
-
-	.errorMessage {
-		font-size: 30px;
-		padding: 15px;
-	}
+#middle {
+    height: 60px;
+    font-size: 40px;
+    line-height: 60px;
+    color: red;
 }

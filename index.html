@@ -2,24 +2,83 @@
 <html>
 
 <head>
-    <title>Giphy API</title>
+    <title>RPS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <script src="https://use.fontawesome.com/012cbd19ef.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 </head>
 
 <body>
-    <div class="header">
-        <div class="searchBar">
-            <i class="searchIcon fa fa-search" aria-hidden="true"></i><input class="search" type="text" value="WHAT WOULD YOU LIKE TO ADD?"></input><div class="submit">ADD SEARCH BUTTON</div>
+    <div class="container">
+        <div class="row">
+            <div class="header col-md-12">
+                <h1>Rock Paper Scissors</h1>
+                <div class="nameBox">
+                <input value ="Enter Name to Start" type="text" id="name-input"><button type="submit" id="submit-button">Submit</button>
+                </div>
+            </div>
         </div>
-        <div class="buttonArea"></div>
     </div>
-    <div class="gifArea"></div>
-    <div class="error"></div>
+    <div class="container">
+        <div class="row">
+            <div id=player1 class="col-md-4 playerBox">
+                <h2>Player 1</h2>
+                <h3 class="p1name"></h3>
+                <h3 class="pick1"></h3>
+                <h4 class="p1score">Wins : 0</h4>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <button class="pickButton p1btn disabled">Rock</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="pickButton p1btn disabled">Paper</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="pickButton p1btn disabled">Scissors</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="middle" class="col-md-4">
+            </div>
+                <div id=player2 class="col-md-4 playerBox">
+                <h2>Player 2</h2>
+                <h3 class="p2name"></h3>
+                <h3 class="pick2"></h3>
+                <h4 class="p2score">Wins 0</h4>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <button class="pickButton p2btn disabled">Rock</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="pickButton p2btn disabled">Paper</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="pickButton p2btn disabled">Scissors</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container chatContainer">
+    <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 chatBox"></div>
+    <div class="col-md-2"></div>
+    </div>
+     <div class="row">
+     <div class="col-md-2"></div>
+    <div class="col-md-8 chatDiv disabled">
+    	<input type="text" class="chatInput"><button class="chatSend">Send</button>
+    	<div class="col-md-2"></div>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="playerList"></div>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 
